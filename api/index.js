@@ -87,3 +87,25 @@ app.use(express.static(path.join(__dirname, 'frontend'))); // Certifique-se de q
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
+const fs = require('fs');
+const path = require('path');
+
+const dataFilePath = path.join(__dirname, '../pontos.json');
+
+module.exports = (req, res) => {
+  if (req.method === 'GET') {
+    // Lê os pontos do arquivo JSON
+    const pontos = JSON.parse(fs.readFileSync(dataFilePath));
+    res.status(200).json(pontos);
+  } else if (req.method === 'POST') {
+    // Adiciona um novo ponto
+    const novoPonto = req.body;
+    const pontos = JSON.parse(fs.readFileSync(dataFilePath));
+    pontos.push(novoPonto);
+    fs.writeFileSync(dataFilePath, JSON.stringify(pontos));
+    res.status(201).json({ message: 'Ponto registrado com sucesso' });
+  } else {
+    res.status(405).json({ error: 'Método não permitido' });
+  }
+};
