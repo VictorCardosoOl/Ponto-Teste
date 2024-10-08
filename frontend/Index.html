@@ -7,57 +7,97 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Controle de Ponto</h1>
-    
-    <!-- Seção de entrada de dados -->
-    <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
-    </div>
-    <div>
-        <label for="categoria">Categoria:</label>
-        <!-- Botões de seleção de categoria com classes e ID exclusivos -->
-        <span class="circulo" onclick="selectCategoria('V')" id="categoria-v">V</span>
-        <span class="circulo" onclick="selectCategoria('I')" id="categoria-i">I</span>
-    </div>
-    <div>
-        <label for="tipo">Tipo de Marca:</label>
-        <select id="tipo">
-            <option value="Entrada">Entrada</option>
-            <option value="Café">Café</option>
-            <option value="Retorno Café">Retorno Café</option>
-            <option value="Almoço">Almoço</option>
-            <option value="Retorno Almoço">Retorno Almoço</option>
-            <option value="Saída">Saída</option>
-        </select>
-    </div>
-    
-    <!-- Botões de interação -->
-    <button id="baterPonto">Bater Ponto</button>
-    <button id="downloadBtn">Baixar Planilha</button>
-    
-    <!-- Tabela de exibição dos pontos -->
-    <h2>Tabela de Pontos</h2>
-    <table id="tabelaPontos">
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Nome</th>
-                <th>Categoria</th>
-                <th>Entrada</th>
-                <th>Café</th>
-                <th>Retorno Café</th>
-                <th>Almoço</th>
-                <th>Retorno Almoço</th>
-                <th>Saída</th>
-            </tr>
-        </thead>
-        <tbody id="tabelaBody">
-            <!-- Linhas de pontos serão preenchidas dinamicamente pelo JavaScript -->
-        </tbody>
-    </table>
+    <div class="back">
+        <h1>Controle de Ponto</h1>
+        <div class="header">
+            <div class="formulario">
+                <form id="pontoForm">
+                    <input class="caixa" type="text" id="nome" placeholder="Nome" required>
 
-    <!-- Adiciona o script principal para comunicação com o servidor -->
+                    <select class="caixa" id="tipo" required>
+                        <option value="">Selecionar Tipo</option>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Café 1">Café 1</option>
+                        <option value="Retorno Café 1">Retorno Café 1</option>
+                        <option value="Almoço">Almoço</option>
+                        <option value="Retorno Almoço">Retorno Almoço</option>
+                        <option value="Café 2">Café 2</option>
+                        <option value="Retorno Café 2">Retorno Café 2</option>
+                        <option value="Saída">Saída</option>
+                    </select>
+
+                    <div>
+                        <label><input type="radio" name="categoria" value="CLT"> CLT</label>
+                        <label><input type="radio" name="categoria" value="Estagio"> Estagiário</label>
+                    </div>
+
+                    <button type="submit" id="baterPonto">Bater Ponto</button>
+                    <button type="button" id="downloadBtn">Baixar Planilha</button>
+                </form>
+            </div>
+
+            <div class="filtros">
+                <input class="caixa" type="text" id="filtroNome" placeholder="Filtrar por nome">
+
+                <select class="caixa" id="mesFiltro">
+                    <option value="">Ponto mensal</option>
+                    <option value="0">Janeiro</option>
+                    <option value="1">Fevereiro</option>
+                    <option value="2">Março</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Maio</option>
+                    <option value="5">Junho</option>
+                    <option value="6">Julho</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Setembro</option>
+                    <option value="9">Outubro</option>
+                    <option value="10">Novembro</option>
+                    <option value="11">Dezembro</option>
+                </select>
+
+                <select class="caixa" id="tipoPontoFiltro">
+                    <option value="">Tipo de ponto</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Café 1">Café 1</option>
+                    <option value="Retorno Café 1">Retorno Café 1</option>
+                    <option value="Café 2">Café 2</option>
+                    <option value="Retorno Café 2">Retorno Café 2</option>
+                    <option value="Almoço">Almoço</option>
+                    <option value="Saída">Saída</option>
+                </select>
+
+                <select class="caixa" id="tipoColaboradorFiltro">
+                    <option value="">Regime de trabalho</option>
+                    <option value="CLT">CLT</option>
+                    <option value="Estagio">Estagiário</option>
+                </select>
+            </div>
+        </div>
+    
+        <h2>Tabela de Pontos</h2>
+        <table id="tabelaPontos">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Entrada</th>
+                    <th>Café 1</th>
+                    <th>Retorno Café 1</th>
+                    <th>Almoço</th>
+                    <th>Retorno Almoço</th>
+                    <th>Café 2</th>
+                    <th>Retorno Café 2</th>
+                    <th>Saída</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaBody">
+            </tbody>
+        </table>
+        
+        <div id="pagination" class="pagination"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
