@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Controle de Ponto</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="back">
@@ -26,21 +31,21 @@
                         <option value="Saída">Saída</option>
                     </select>
 
-                    <div>
-                        <label><input type="radio" name="categoria" value="CLT"> CLT</label>
-                        <label><input type="radio" name="categoria" value="Estagio"> Estagiário</label>
-                    </div>
+                    
+                    <label class="labelHe"><input type="radio" name="categoria" value="CLT"> CLT</label>
+                    <label class="labelHe"><input type="radio" name="categoria" value="Estagio"> Estagiário</label>
+                    
 
-                    <button type="submit" id="baterPonto">Bater Ponto</button>
-                    <button type="button" id="downloadBtn">Baixar Planilha</button>
+                    <button class="butao" type="submit" id="baterPonto">Bater Ponto</button>
                 </form>
-            </div>
 
+            </div>
+            
             <div class="filtros">
                 <input class="caixa" type="text" id="filtroNome" placeholder="Filtrar por nome">
-
+                
                 <select class="caixa" id="mesFiltro">
-                    <option value="">Ponto mensal</option>
+                    <option value="">Selecionar Mês</option>
                     <option value="0">Janeiro</option>
                     <option value="1">Fevereiro</option>
                     <option value="2">Março</option>
@@ -55,27 +60,17 @@
                     <option value="11">Dezembro</option>
                 </select>
 
-                <select class="caixa" id="tipoPontoFiltro">
-                    <option value="">Tipo de ponto</option>
-                    <option value="Entrada">Entrada</option>
-                    <option value="Café 1">Café 1</option>
-                    <option value="Retorno Café 1">Retorno Café 1</option>
-                    <option value="Café 2">Café 2</option>
-                    <option value="Retorno Café 2">Retorno Café 2</option>
-                    <option value="Almoço">Almoço</option>
-                    <option value="Saída">Saída</option>
-                </select>
-
+                
                 <select class="caixa" id="tipoColaboradorFiltro">
                     <option value="">Regime de trabalho</option>
                     <option value="CLT">CLT</option>
                     <option value="Estagio">Estagiário</option>
                 </select>
-            </div>
+                </div>
+
         </div>
-    
-        <h2>Tabela de Pontos</h2>
-        <table id="tabelaPontos">
+   
+        <table id="tabelaPontos" class="tabelaPontos">
             <thead>
                 <tr>
                     <th>Data</th>
@@ -89,15 +84,34 @@
                     <th>Café 2</th>
                     <th>Retorno Café 2</th>
                     <th>Saída</th>
-                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody id="tabelaBody">
             </tbody>
         </table>
         
+        <div class="excel">
+            <input class="caixaEx" type="text" id="filtroNome1" placeholder="Filtrar por nome">
+            
+        
+            <label for="dataInicio" class="datel">Data Início:</label>
+    <input class="date" type="date" id="dataInicio1">
+
+    <label for="dataFim" class="datel">Data Fim:</label>
+    <input class="date" type="date" id="dataFim1">
+            
+            <select class="caixaEx" id="tipoColaboradorFiltro1">
+                <option value="">Regime de trabalho</option>
+                <option value="CLT">CLT</option>
+                <option value="Estagio">Estagiário</option>
+            </select>
+            
+            <button class="butaoEx" id="exportarExcel">Exportar para Excel</button>
+        </div>
+
         <div id="pagination" class="pagination"></div>
+
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>
