@@ -1,11 +1,10 @@
 {
-  "name": "server",
+  "name": "meu-projeto",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "api/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-   
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +14,8 @@
     "express": "^4.21.0",
     "xlsx": "^0.18.5"
   },
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
 }
