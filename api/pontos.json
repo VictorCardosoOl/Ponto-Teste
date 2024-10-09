@@ -1,109 +1,15 @@
 [
   {
-    "data": "07/10/2024",
-    "nome": "Victor Cardoso Cunha",
-    "categoria": "Estagio",
-    "Entrada": "19:37:45",
-    "Café": "22:17:07",
-    "Almoço": "19:32:27",
-    "Retorno Almoço": "19:32:30",
-    "Retorno Café": "19:32:34",
-    "Saída": "19:32:39"
-  },
-  {
-    "data": "07/10/2024",
+    "data": "09/10/2024",
     "nome": "Marcelo",
     "categoria": "CLT",
-    "Café": "19:39:29",
-    "Entrada": "19:39:32",
-    "Almoço": "19:39:34",
-    "Retorno Almoço": "19:39:39",
-    "Saída": "19:39:43"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "Marcos",
-    "categoria": "Estagio",
-    "Saída": "19:43:27"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "Miguel",
-    "categoria": "Estagio",
-    "Saída": "19:43:32"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "João",
-    "categoria": "Estagio",
-    "Saída": "19:43:38"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "arthur",
-    "categoria": "Estagio",
-    "Saída": "19:43:47"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "Victor C",
-    "categoria": "CLT",
-    "Entrada": "20:02:31",
-    "Café": "20:02:34",
-    "Retorno Café": "20:02:52"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "S22vic",
-    "categoria": "CLT",
-    "Retorno Café": "22:17:30"
-  },
-  {
-    "data": "07/10/2024",
-    "nome": "Victor cc",
-    "categoria": "CLT",
-    "Entrada": "22:20:36"
-  },
-  {
-    "data": "08/10/2024",
-    "nome": "Victor Cardoso Cunha",
-    "categoria": "CLT",
-    "Entrada": "09:26:38",
-    "Café": "09:26:51",
-    "Almoço": "09:29:59",
-    "Café 1": "10:31:23"
-  },
-  {
-    "data": "08/10/2024",
-    "nome": "Victor cc",
-    "categoria": "CLT",
-    "Almoço": "09:30:13",
-    "Retorno Café": "09:48:39",
-    "Café 2": "10:23:38"
-  },
-  {
-    "data": "08/10/2024",
-    "nome": "S22vic",
-    "categoria": "CLT",
-    "Entrada": "09:38:44"
-  },
-  {
-    "data": "08/10/2024",
-    "nome": "Tay Cristina Barros de Oliveira",
-    "categoria": "Estagio",
-    "Café": "09:40:13"
-  },
-  {
-    "data": "09/10/2024",
-    "nome": "Victor Cardoso Cunha",
-    "categoria": "CLT",
-    "Entrada": "19:55:45",
-    "Café 1": "19:55:53"
-  },
-  {
-    "data": "09/10/2024",
-    "nome": "Victor Cardoso",
-    "categoria": "CLT",
-    "Café 1": "19:55:59"
+    "Entrada": "20:04:05",
+    "Café 1": "20:04:08",
+    "Retorno Café 1": "20:04:11",
+    "Almoço": "20:04:14",
+    "Retorno Almoço": "20:04:18",
+    "Café 2": "20:04:21",
+    "Retorno Café 2": "20:04:25",
+    "Saída": "20:04:29"
   }
 ]
